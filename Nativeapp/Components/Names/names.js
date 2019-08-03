@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { Text, View, AppRegistry } from 'react-native';
+import { AppRegistry, Text, View } from 'react-native';
 
 
-export class Greenting extends Component {
-    render() {
-        return (
-            <View style={{ alignItems: 'center' }}>
-                <Text>Hello {this.props.name}!</Text>
-            </View>
-        );
-    }
+function Greeting(props) {
+    return (
+        <View>
+            <Text>Hello {props.name}!</Text>
+        </View>
+    );
 }
 
-AppRegistry.registerComponent('Names', () => Greeting);
+export default Greeting;
